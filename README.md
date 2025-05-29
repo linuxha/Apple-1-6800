@@ -15,6 +15,13 @@ Just a note, I'm not even close to being the first to build these boards. Lots o
 
 I like Motorola CPU and their instruction set. One of my first jobs, out of college, was working with Motorola embedded board (6800, 6802, 6809 and 68000). So while my first computer is my Atari 800XL I mostly worked with Motorola.
 
+# Assemble wozmon-68 (WIP)
+
+At the moment this doesn't really work well. But it should assemble the wozmon-68.asm file to an S19 file @FF00 (256 bytes). While it assembles it's not working or useful yet. The simulator (sim6800) has an 6850 ACIA @$F000 so I need to write PIA -> ACIA replacement routines. 
+
+```
+make wozsim.s19
+```
 # Links
 
 - https://www.applefritter.com/replica
