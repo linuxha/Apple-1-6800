@@ -26,16 +26,32 @@ wozsim.lst: wozmon-68.asm wozmon.inc ascii.inc
 
 wozsim.p: wozmon-68.asm wozmon.inc ascii.inc
 	asl -i . -D SIM -L wozmon-68.asm
+
 # ------------------------------------------------------------------------------
 # PIA @$D010 (D010-D013) (FT ACIA board works @$D010)
-wozmon.s19: wozmon.p
+wozmon.s19: wozmon-68.p
+	p2hex +5 -F Moto -r \$$-\$$ wozmon-68.p wozmon.s19
+	ls
+	echo
+	srec_info wozmon.s19
+
+wozmon.lst: wozmon-68.asm wozmon.inc ascii.inc
+	asl -i . -L wozmon-68.asm
+
+wozmon.p: wozmon-68.asm wozmon.inc ascii.inc
+	asl -i . -L wozmon-68.asm
+
+# For the 6502
+# ------------------------------------------------------------------------------
+# PIA @$D010 (D010-D013) (FT ACIA board works @$D010)
+xozmon.s19: wozmon.p
 	p2hex +5 -F Moto -r \$$-\$$ wozmon.p wozmon.s19
 	ls
 	echo
 	srec_info wozmon.s19
 
-wozmon.lst: wozmon.asm wozmon.inc ascii.inc
+xozmon.lst: wozmon.asm wozmon.inc ascii.inc
 	asl -i . -D DEF9600 -L wozmon.asm
 
-wozmon.p: wozmon.asm wozmon.inc ascii.inc
+xozmon.p: wozmon.asm wozmon.inc ascii.inc
 	asl -i . -D DEF9600 -L wozmon.asm
