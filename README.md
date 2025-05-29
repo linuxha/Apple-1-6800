@@ -44,7 +44,7 @@ make wozsim.s19
 
 ## Assemble for the the clone board
 
-I expect this code will work on the clone board and the only difference between this code and the original 
+I expect this code will work on the clone board.
 
 ```
 make wozmon.s19
