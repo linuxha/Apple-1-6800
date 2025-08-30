@@ -56,4 +56,4 @@ make wozmon.s19
 - https://www.applefritter.com/replica
 - https://www.applefritter.com/apple1
 - https://github.com/linuxha/apple-1-6502
-- (Apple 1 World First? Running a 6800 Processor on an Apple 1!)[https://www.youtube.com/watch?v=ag6pWUhps7U&t=42s] <- 74L04 instead of a 7400 plus other info
+- [Apple 1 World First? Running a 6800 Processor on an Apple 1!](https://www.youtube.com/watch?v=ag6pWUhps7U&t=42s) <- 74L04 instead of a 7400 plus other info
